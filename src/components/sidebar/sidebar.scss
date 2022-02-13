@@ -1,0 +1,33 @@
+@import "./../../index.scss";
+
+.sidebar{
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 5rem;
+  position: sticky;
+  top: 1vh;
+  left: 1vh;
+  width: 150px;
+  height: 90vh;
+
+  a{
+    color: $text-color;
+    text-decoration: none;
+  }
+  a:hover{
+    color: $hover-color;
+    text-decoration: none;
+  }
+
+  li{
+    display: flex;
+    align-items: center;
+    padding: 1rem 1rem;
+
+    span{
+      font-size: 15px;
+      margin-left: 5px;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import "./../../index.scss";
+
+.buybacks{
+  color: $text-color;
+  font-size: 2.2rem;
+
+  span:hover{
+    color: $hover-color;
+  }
+
+  &_row{
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 0.2rem;
+    margin: 5px;
+
+    transition: transform 0.2s ease-in;
+
+    a{
+      text-decoration: none;
+      color: $text-color;
+
+      &:hover{
+        text-decoration: none;
+        color: $hover-color;
+      }
+    }
+    &:hover{
+      transform: scale(1.07, 1.07);
+      color: $hover-color;
+    }
+  }
+}

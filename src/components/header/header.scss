@@ -1,0 +1,27 @@
+@import "./../../index.scss";
+
+.header{
+  color: $text-color;
+  align-items: center;
+  height: 12vh;
+
+  justify-content: space-between;
+
+  padding: 1rem 1rem;
+
+  &_logo{
+    width: 50px;
+    object-fit: contain;
+  }
+
+  a{
+    text-decoration: none;
+    color: $text-color;
+    font-size: 2rem;
+    margin-left: 1rem;
+  }
+  a:hover{
+    text-decoration: none;
+    color: $hover-color;
+  }
+}

@@ -1,0 +1,54 @@
+@import "./../../index.scss";
+
+.portfolio{
+  &_wallet{
+    color: $text-color;
+    font-size: 1.5rem;
+    padding-top: 2rem;
+
+    &_row{
+      font-size: 1.2rem;
+      padding: 1rem;
+      align-items: center;
+      transition: transform 0.2s ease-in;
+
+      img{
+        width: 40px;
+        margin-right: 5px;
+      }
+      &:hover{
+        transform: scale(1.1, 1.1);
+        color: $hover-color;
+      }
+    }
+  }
+
+  &_row{
+    color: $text-color;
+    font-size: 1.5rem;
+
+    span{
+      display: block;
+    }
+    img{
+      width: 40px;
+      height: 40px;
+      margin-right: 5px;
+    }
+
+    &_item{
+      transition: transform 0.2s ease-in;
+      align-items: center;
+      text-align: center;
+      padding-top: 0.8rem;
+      padding-bottom: 0.8rem;
+      border: 1px solid #333;
+
+      height: 100px;
+
+      &:hover{
+        transform: scale(1.1, 1.1);
+      }
+    }
+  }
+}
