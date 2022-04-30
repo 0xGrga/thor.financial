@@ -2,6 +2,13 @@
 
 This project is functional version of [Thor Financial Treasury](https://treasury.thor.financial/), this site was created in [React.js](https://reactjs.org)
 
+## Install Dependencies
+
+In project directory, run:
+### `npm install`
+
+This install all node modules needed.
+
 ## Available Scripts
 
 In the project directory, you can run:
