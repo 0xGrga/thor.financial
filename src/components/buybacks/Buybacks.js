@@ -34,9 +34,9 @@ const BuyBackRow = ({ data }) => {
 
 const TotalBuyback = ({ totalBuyBack, thorPrice }) => {
   return (
-    <>
+    <div style={{"font-size": "2.2rem"}}>
       Total Thor bought back: <span>{totalBuyBack?.toLocaleString()}</span> worth <span>${(thorPrice*totalBuyBack)?.toLocaleString()}</span>
-    </>
+    </div>
   )
 };
 
@@ -96,11 +96,7 @@ const Buybacks = () => {
 
   return (
     <div className="buybacks">
-      {!totalBuyBack ? (
-        <span>Loading.....</span>
-      ) : (
-        <TotalBuyback totalBuyBack={totalBuyBack} thorPrice={thorPrice} />
-      )}
+      {totalBuyBack && <TotalBuyback totalBuyBack={totalBuyBack} thorPrice={thorPrice} />}
       <br />
       <br />
       {!gotData ? (txids?.map((data, i) => (

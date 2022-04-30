@@ -91,24 +91,24 @@ const Portfolio = () => {
       for(var i in chains){
         var response = await axios(`${balance_endpoint}${chains[i]}`);
         response = response.data.data;
-        response.forEach((data) => {
-          const { symbol, balance, decimals, price, chain, logo_url} = data;
+        for(let i = 0; i < response.length; i++){
+          const { symbol, balance, decimals, price, chain, logo_url} = response[i];
           const usd_value = balance / 10**decimals * price;
           portfolio_loc.push({symbol: symbol, balance: balance / 10**decimals, logo: logo_url, price: price, usd_value: usd_value, chain: chain});
-        });
+        }
+
       }
       response = await axios(defi_endpoint);
       response = response.data.data;
-      response.forEach(data => {
-        const { portfolio_list } = data;
+      for(let i = 0; i < response.length; i++){
+        const { portfolio_list } = response[i];
         if(portfolio_list.length === 1){
           var details = portfolio_list[0];
           details = details.detail.supply_token_list || details.detail.token_list;
           const { symbol, amount, price, chain, logo_url} = details[0];
           portfolio_loc.push({symbol: symbol, balance: amount, logo: logo_url, price: price, usd_value: amount * price, chain: chain});
         }
-      })
-
+      }
 
       portfolio_loc = portfolio_loc.sort((a, b) => (a.usd_value > b.usd_value) ? -1 : 1);
       setPortfolio(portfolio_loc);
